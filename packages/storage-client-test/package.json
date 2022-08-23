@@ -1,0 +1,29 @@
+{
+  "name": "storage-client-test",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Taylor Laekeman",
+  "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-client-test#readme",
+  "license": "ISC",
+  "main": "lib/storage-client-test.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorlaekeman/storage-client.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/storage-client-test.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/taylorlaekeman/storage-client/issues"
+  }
+}

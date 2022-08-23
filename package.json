@@ -1,0 +1,26 @@
+{
+  "name": "@taylorlaekeman/storage-client",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorlaekeman/storage-client.git"
+  },
+  "author": "Taylor Laekeman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/taylorlaekeman/storage-client/issues"
+  },
+  "homepage": "https://github.com/taylorlaekeman/storage-client#readme",
+  "devDependencies": {
+    "lerna": "^5.4.3",
+    "nx": "^14.5.10"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
