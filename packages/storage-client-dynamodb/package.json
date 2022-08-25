@@ -21,7 +21,10 @@
     "url": "git+https://github.com/taylorlaekeman/storage-client.git"
   },
   "scripts": {
-    "test": "node ./__tests__/storage-client-dynamodb.test.js"
+    "build": "webpack",
+    "check": "npm run typecheck",
+    "test": "node ./__tests__/storage-client-dynamodb.test.js",
+    "typecheck": "tsc -p . --noEmit"
   },
   "bugs": {
     "url": "https://github.com/taylorlaekeman/storage-client/issues"
