@@ -1,5 +1,5 @@
 const log = () => {
-  console.log('storage client dynamodb');
+  /* do nothing */
 };
 
 export default log;

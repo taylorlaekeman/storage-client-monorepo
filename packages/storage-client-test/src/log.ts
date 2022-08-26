@@ -1,5 +1,5 @@
 const log = () => {
-  console.log('storage client test');
+  /* do nothing */
 };
 
 export default log;

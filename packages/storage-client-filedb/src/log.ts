@@ -1,5 +1,5 @@
 const log = () => {
-  console.log('storage client filedb');
+  /* do nothing */
 };
 
 export default log;
