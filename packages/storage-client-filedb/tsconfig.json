@@ -2,9 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@src/*": ["./packages/storage-client-filedb/src/*"],
-      "@test/*": ["./packages/storage-client-filedb/test/*"]
+      "@test/*": ["./packages/storage-client-filedb/__tests__/*"]
     }
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "test/**/*"]
+  "include": ["src/**/*", "__tests__/**/*"]
 }

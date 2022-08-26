@@ -22,8 +22,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "check": "npm run typecheck",
-    "test": "node ./__tests__/storage-client-core.test.js",
+    "check": "npm run typecheck && npm run test",
+    "test": "jest",
     "typecheck": "tsc -p . --noEmit"
   },
   "bugs": {

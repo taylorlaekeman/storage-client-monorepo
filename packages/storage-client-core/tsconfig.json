@@ -2,9 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@src/*": ["./packages/storage-client-core/src/*"],
-      "@test/*": ["./packages/storage-client-core/test/*"]
+      "@test/*": ["./packages/storage-client-core/__tests__/*"]
     }
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "test/**/*"]
+  "include": ["src/**/*", "__tests__/**/*"]
 }
