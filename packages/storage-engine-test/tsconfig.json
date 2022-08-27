@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@src/*": ["./packages/storage-client-test/src/*"],
-      "@test/*": ["./packages/storage-client-test/__tests__/*"]
+      "@src/*": ["./packages/storage-engine-test/src/*"],
+      "@test/*": ["./packages/storage-engine-test/__tests__/*"]
     }
   },
   "extends": "../../tsconfig.json",
