@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@src/*": ["./packages/storage-client-dynamodb/src/*"],
-      "@test/*": ["./packages/storage-client-dynamodb/__tests__/*"]
+      "@src/*": ["./packages/storage-engine-dynamodb/src/*"],
+      "@test/*": ["./packages/storage-engine-dynamodb/__tests__/*"]
     }
   },
   "extends": "../../tsconfig.json",
