@@ -19,7 +19,7 @@ class TestStorageEngine implements IStorageEngine {
     if (!(tableName in this.tables)) throw new MissingTableError({ tableName });
     const {
       hashKey: hashKeyName,
-      items,
+      items = {},
       sortKey: sortKeyName,
     } = this.tables[tableName];
     const hashKeyValue = item[hashKeyName];
@@ -66,7 +66,7 @@ export type Tables = Record<
   string,
   {
     hashKey: string;
-    items: Items;
+    items?: Items;
     sortKey?: string;
   }
 >;
