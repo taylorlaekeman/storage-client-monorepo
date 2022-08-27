@@ -1,11 +1,11 @@
 {
-  "name": "storage-client-filedb",
+  "name": "@taylorlaekeman/storage-engine-filedb",
   "version": "0.0.0",
   "description": "> TODO: description",
   "author": "Taylor Laekeman",
-  "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-client-filedb#readme",
+  "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-engine-filedb#readme",
   "license": "ISC",
-  "main": "lib/storage-client-filedb.js",
+  "main": "lib/index.js",
   "directories": {
     "lib": "lib",
     "test": "__tests__"
