@@ -1,6 +1,6 @@
 {
-  "name": "storage-client-test",
-  "version": "0.0.0",
+  "name": "@taylorlaekeman/storage-client-test",
+  "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Taylor Laekeman",
   "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-client-test#readme",
@@ -10,9 +10,7 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "publishConfig": {
     "registry": "https://registry.npmjs.com/"
   },

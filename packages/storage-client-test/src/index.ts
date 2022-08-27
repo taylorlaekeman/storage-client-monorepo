@@ -1,3 +1,3 @@
-import log from '@src/log';
+export { default as TestStorageEngine } from '@src/storageEngine';
 
-log();
+export default {};

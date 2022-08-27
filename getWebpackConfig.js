@@ -13,6 +13,7 @@ const getWebpackConfig = ({ directory }) => ({
   },
   output: {
     filename: 'index.js',
+    libraryTarget: 'commonjs2',
     path: path.resolve(directory, 'lib'),
   },
   resolve: {
