@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     'import/no-extraneous-dependencies': ['error', { packageDir: '../../' }],
     'no-console': 'error',
+    'no-use-before-define': 'off',
   },
   settings: {
     'import/resolver': {

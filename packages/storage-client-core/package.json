@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "webpack",
-    "check": "npm run typecheck && npm run test",
+    "check": "npm run lint && npm run typecheck && npm run test",
     "lint": "eslint src/**/* __tests__/**/* && prettier --check .",
     "lint-fix": "eslint src/**/* __tests__/**/* --fix && prettier --write .",
     "test": "jest",
