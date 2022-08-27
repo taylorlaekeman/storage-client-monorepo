@@ -1,4 +1,4 @@
-import { runEngineTests } from '@taylorlaekeman/storage-client-core';
+import { runEngineTests } from '@taylorlaekeman/storage-engine-core';
 
 import StorageEngine from '@src/storageEngine';
 

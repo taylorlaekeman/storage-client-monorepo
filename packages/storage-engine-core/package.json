@@ -1,9 +1,9 @@
 {
-  "name": "@taylorlaekeman/storage-client-core",
+  "name": "@taylorlaekeman/storage-engine-core",
   "version": "0.0.1",
   "description": "> TODO: description",
   "author": "Taylor Laekeman",
-  "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-client-core#readme",
+  "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-engine-core#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "directories": {

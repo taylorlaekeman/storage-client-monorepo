@@ -6,7 +6,7 @@ import IStorageEngine, {
   MissingKeyError,
   MissingTableError,
   Item,
-} from '@taylorlaekeman/storage-client-core';
+} from '@taylorlaekeman/storage-engine-core';
 
 class TestStorageEngine implements IStorageEngine {
   readonly tables: Tables;
