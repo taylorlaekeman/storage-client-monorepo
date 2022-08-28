@@ -1,0 +1,38 @@
+{
+  "name": "@taylorlaekeman/storage-engine-test",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "Taylor Laekeman",
+  "homepage": "https://github.com/taylorlaekeman/storage-client/tree/main/packages/storage-engine-test#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taylorlaekeman/storage-client.git"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "check": "npm run lint && npm run typecheck && npm run test",
+    "clean": "rm lib/*",
+    "lint": "eslint src/**/* __tests__/**/* && prettier --check .",
+    "lint-fix": "eslint src/**/* __tests__/**/* --fix && prettier --write .",
+    "test": "jest",
+    "typecheck": "tsc -p . --noEmit"
+  },
+  "bugs": {
+    "url": "https://github.com/taylorlaekeman/storage-client/issues"
+  },
+  "dependencies": {
+    "@taylorlaekeman/storage-engine-core": "^0.0.1"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "lib": ["es2019"],
+    "module": "CommonJS",
+    "moduleResolution": "node"
+  }
+}
