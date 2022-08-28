@@ -1,4 +1,4 @@
-import StorageError from '@src/storageError';
+import StorageError from './storageError';
 
 class MissingKeyError extends StorageError {
   constructor() {

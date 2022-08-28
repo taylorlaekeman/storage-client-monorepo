@@ -1,12 +1,16 @@
-import IStorageEngine, {
+/* eslint-disable @typescript-eslint/require-await */
+import StorageEngine, {
   AddItemInput,
   CreateTableInput,
   ExistingTableError,
+  DescribeTableInput,
   GetItemsInput,
   MissingKeyError,
   MissingTableError,
   Item,
 } from '@taylorlaekeman/storage-engine-core';
+
+type IStorageEngine = typeof StorageEngine;
 
 class TestStorageEngine implements IStorageEngine {
   readonly tables: Tables;
@@ -22,14 +26,14 @@ class TestStorageEngine implements IStorageEngine {
       items = {},
       sortKey: sortKeyName,
     } = this.tables[tableName];
-    const hashKeyValue = item[hashKeyName];
+    const hashKeyValue = item[hashKeyName] as string;
     if (!hashKeyValue) throw new MissingKeyError();
     if (!items[hashKeyValue]) items[hashKeyValue] = {};
     if (!sortKeyName) {
       this.tables[tableName].items[hashKeyValue] = item;
       return item;
     }
-    const sortKeyValue = item[sortKeyName];
+    const sortKeyValue = item[sortKeyName] as string;
     if (!sortKeyValue) throw new MissingKeyError();
     if (!items[hashKeyValue][sortKeyValue])
       items[hashKeyValue][sortKeyValue] = {};
@@ -42,14 +46,13 @@ class TestStorageEngine implements IStorageEngine {
     this.tables[tableName] = { hashKey, items: {}, sortKey };
   };
 
-  describeTable = async ({ tableName }) => {
+  describeTable = async ({ tableName }: DescribeTableInput) => {
     if (!(tableName in this.tables)) throw new MissingTableError({ tableName });
     const { hashKey, sortKey } = this.tables[tableName];
     return { hashKey, sortKey };
   };
 
   getItems = async ({
-    hashKeyName,
     hashKeyValue,
     tableName,
   }: GetItemsInput): Promise<Item[]> => {
@@ -57,8 +60,8 @@ class TestStorageEngine implements IStorageEngine {
     const { items, sortKey } = this.tables[tableName];
     if (!items) return [];
     if (!items[hashKeyValue]) return [];
-    if (!sortKey) return [items[hashKeyValue]];
-    return Object.values(items[hashKeyValue]);
+    if (!sortKey) return [items[hashKeyValue] as Item];
+    return Object.values(items[hashKeyValue] as Record<string, Item>);
   };
 }
 

@@ -1,7 +1,15 @@
-export { default as ExistingTableError } from '@src/existingTableError';
-export { default as MissingKeyError } from '@src/missingKeyError';
-export { default as MissingTableError } from '@src/missingTableError';
-export { default as runEngineTests } from '@src/runEngineTests';
-export { default as StorageEngine } from '@src/storageEngine';
+export { default as ExistingTableError } from './existingTableError';
+export { default as MissingKeyError } from './missingKeyError';
+export { default as MissingTableError } from './missingTableError';
+export { default as runEngineTests } from './runEngineTests';
+export {
+  AddItemInput,
+  CreateTableInput,
+  DescribeTableInput,
+  GetItemsInput,
+  Item,
+  default as StorageEngine,
+  TableDescription,
+} from './storageEngine';
 
 export default {};

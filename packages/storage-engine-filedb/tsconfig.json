@@ -1,10 +1,8 @@
 {
   "compilerOptions": {
-    "paths": {
-      "@src/*": ["./packages/storage-engine-filedb/src/*"],
-      "@test/*": ["./packages/storage-engine-filedb/__tests__/*"]
-    }
+    "baseUrl": "./",
+    "outDir": "lib"
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "__tests__/**/*"]
+  "include": ["src/**/*"]
 }

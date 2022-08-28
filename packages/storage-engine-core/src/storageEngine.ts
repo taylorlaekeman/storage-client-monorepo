@@ -32,7 +32,7 @@ export interface TableDescription {
 
 export interface GetItemsInput {
   hashKeyName: string;
-  hashKeyValue: boolean | number | string;
+  hashKeyValue: string;
   tableName: string;
 }
 

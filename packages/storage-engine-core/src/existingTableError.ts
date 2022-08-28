@@ -1,4 +1,4 @@
-import StorageError from '@src/storageError';
+import StorageError from './storageError';
 
 class ExistingTableError extends StorageError {
   constructor({ tableName }: { tableName: string }) {

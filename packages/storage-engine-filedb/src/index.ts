@@ -1,3 +1,1 @@
-import log from '@src/log';
-
-log();
+export default {};

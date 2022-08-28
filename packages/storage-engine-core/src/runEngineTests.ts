@@ -1,7 +1,7 @@
-import ExistingTableError from '@src/existingTableError';
-import MissingKeyError from '@src/missingKeyError';
-import MissingTableError from '@src/missingTableError';
-import type StorageEngine from '@src/storageEngine';
+import ExistingTableError from './existingTableError';
+import MissingKeyError from './missingKeyError';
+import MissingTableError from './missingTableError';
+import type StorageEngine from './storageEngine';
 
 const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
   test('creates and describes table with sort key', async () => {

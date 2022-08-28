@@ -19,8 +19,9 @@
     "url": "git+https://github.com/taylorlaekeman/storage-client.git"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "tsc -p .",
     "check": "npm run lint && npm run typecheck && npm run test",
+    "clean": "rm lib/*",
     "lint": "eslint src/**/* __tests__/**/* && prettier --check .",
     "lint-fix": "eslint src/**/* __tests__/**/* --fix && prettier --write .",
     "test": "jest",
