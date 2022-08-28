@@ -14,12 +14,12 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    project: 'tsconfig.json',
+    project: './tsconfig.eslint.json',
     sourceType: 'module',
   },
   plugins: ['@typescript-eslint'],
   rules: {
-    'import/no-extraneous-dependencies': ['error', { packageDir: '../../' }],
+    'import/extensions': ['error', { ts: 'never' }],
     'no-console': 'error',
     'no-use-before-define': 'off',
   },
@@ -27,10 +27,10 @@ module.exports = {
     'import/resolver': {
       typescript: {
         project: [
-          'packages/storage-client-core/tsconfig.json',
-          'packages/storage-client-dynamodb/tsconfig.json',
-          'packages/storage-client-filedb/tsconfig.json',
-          'packages/storage-client-test/tsconfig.json',
+          'packages/storage-engine-core/tsconfig.json',
+          'packages/storage-engine-dynamodb/tsconfig.json',
+          'packages/storage-engine-filedb/tsconfig.json',
+          'packages/storage-engine-test/tsconfig.json',
         ],
       },
     },

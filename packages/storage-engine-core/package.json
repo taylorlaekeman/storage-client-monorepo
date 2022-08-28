@@ -10,7 +10,9 @@
     "lib": "lib",
     "test": "__tests__"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.com/"
   },
@@ -21,7 +23,7 @@
   "scripts": {
     "build": "tsc -p .",
     "check": "npm run lint && npm run typecheck && npm run test",
-    "clean": "rm lib/*",
+    "clean": "rm -rf lib/*",
     "lint": "eslint src/**/* __tests__/**/* && prettier --check .",
     "lint-fix": "eslint src/**/* __tests__/**/* --fix && prettier --write .",
     "test": "jest",

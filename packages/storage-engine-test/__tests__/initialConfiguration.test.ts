@@ -1,4 +1,4 @@
-import StorageEngine from '@src/storageEngine';
+import StorageEngine from '../src/storageEngine';
 
 test('describes table specified in initial configuration', async () => {
   const engine = new StorageEngine({

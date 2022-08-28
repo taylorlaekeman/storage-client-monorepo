@@ -1,6 +1,6 @@
 import { runEngineTests } from '@taylorlaekeman/storage-engine-core';
 
-import StorageEngine from '@src/storageEngine';
+import StorageEngine from '../src/storageEngine';
 
 const getEngine = () => new StorageEngine();
 

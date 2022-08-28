@@ -1,6 +1,3 @@
-import ExistingTableError from './existingTableError';
-import MissingKeyError from './missingKeyError';
-import MissingTableError from './missingTableError';
 import type StorageEngine from './storageEngine';
 
 const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
@@ -191,7 +188,7 @@ const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
         hashKey: 'hashKey',
         tableName: 'test-table',
       })
-    ).rejects.toThrow(ExistingTableError);
+    ).rejects.toThrow(/A table with the name 'test-table' already exists./);
   });
 
   test('throws missing table error when describing a table that does not exist', async () => {
@@ -200,7 +197,7 @@ const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
       engine.describeTable({
         tableName: 'test-table',
       })
-    ).rejects.toThrow(MissingTableError);
+    ).rejects.toThrow(/A table with the name 'test-table' could not be found./);
   });
 
   test('throws missing table error when adding to a table that does not exist', async () => {
@@ -210,7 +207,7 @@ const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
         item: { hashKey: 'test-hash-key' },
         tableName: 'test-table',
       })
-    ).rejects.toThrow(MissingTableError);
+    ).rejects.toThrow(/A table with the name 'test-table' could not be found./);
   });
 
   test('throws missing table error when getting from table that does not exist', async () => {
@@ -221,7 +218,7 @@ const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
         hashKeyValue: 'test-hash-key',
         tableName: 'test-table',
       })
-    ).rejects.toThrow(MissingTableError);
+    ).rejects.toThrow(/A table with the name 'test-table' could not be found./);
   });
 
   test('throws missing key error when adding an item that is missing an expected hash key', async () => {
@@ -235,7 +232,7 @@ const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
         item: { otherHashKey: 'test-hash-key' },
         tableName: 'test-table',
       })
-    ).rejects.toThrow(MissingKeyError);
+    ).rejects.toThrow(/The item is missing a key attribute./);
   });
 
   test('throws missing key error when adding an item that is missing an expected sort key', async () => {
@@ -250,7 +247,7 @@ const runEngineTests = ({ getEngine }: { getEngine: () => StorageEngine }) => {
         item: { hashKey: 'test-hash-key' },
         tableName: 'test-table',
       })
-    ).rejects.toThrow(MissingKeyError);
+    ).rejects.toThrow(/The item is missing a key attribute./);
   });
 };
 
