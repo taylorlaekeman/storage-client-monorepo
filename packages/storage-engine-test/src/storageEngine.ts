@@ -29,15 +29,20 @@ class TestStorageEngine implements IStorageEngine {
     const hashKeyValue = item[hashKeyName] as string;
     if (!hashKeyValue) throw new MissingKeyError();
     if (!items[hashKeyValue]) items[hashKeyValue] = {};
+    getNewTableItems();
+    const newItems = { ...items } as Items;
     if (!sortKeyName) {
-      this.tables[tableName].items[hashKeyValue] = item;
+      newItems[hashKeyValue] = item;
+      this.tables[tableName].items = newItems;
       return item;
     }
     const sortKeyValue = item[sortKeyName] as string;
     if (!sortKeyValue) throw new MissingKeyError();
-    if (!items[hashKeyValue][sortKeyValue])
-      items[hashKeyValue][sortKeyValue] = {};
-    this.tables[tableName].items[hashKeyValue][sortKeyValue] = item;
+    newItems[hashKeyValue] = {
+      ...items[hashKeyValue],
+      [sortKeyValue]: item,
+    } as Record<string, Item>;
+    this.tables[tableName].items = newItems;
     return item;
   };
 
@@ -79,5 +84,21 @@ type Items = ItemsWithSortKey | ItemsWithoutSortKey;
 type ItemsWithSortKey = Record<string, Record<string, Item>>;
 
 type ItemsWithoutSortKey = Record<string, Item>;
+
+const getNewTableItems = ({
+  hashKeyName,
+  items,
+  item,
+  sortKeyName,
+}: {
+  hashKeyName: string;
+  items: Items;
+  item: Item;
+  sortKeyName?: string;
+}): Items => {
+  if (!sortKeyName)
+
+  return { ...items };
+};
 
 export default TestStorageEngine;
